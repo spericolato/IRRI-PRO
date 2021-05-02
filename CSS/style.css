@@ -3,15 +3,11 @@
     padding: 0;
 }
 
-body{
-
-}
-
-.container{
+.container {
     width: 100%;
     height: 100vh;
     background: 
-    url("../../ingeniering step-1/VISITE UDA 15 12 20011 022.JPG")  ;
+    url("../img/ingeniering step-1/VISITE UDA 15 12 20011 022.JPG")  ;
     background-size: cover;
 
 }
