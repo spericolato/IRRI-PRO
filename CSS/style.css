@@ -3,18 +3,56 @@
     padding: 0;
 }
 
+body{
+    background: green;
+}
+.logo{
+    filter: opacity(88%);
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+
+}
+
 .container {
     width: 100%;
     height: 100vh;
-    background: 
-    url("../img/ingeniering step-1/VISITE UDA 15 12 20011 022.JPG")  ;
-    background-size: cover;
+}
+.top-nav{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.342);
+    height: 55px;
+    align-items: center;
+    border-bottom: solid 2px snow;
+}
+
+.top-nav-list{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-nav-item{
+    padding: 10px;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
 
 }
+
+.top-nav-link{
+    color: snow;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .navbar{
     width: 300px;
     height: 100%;
-    background-color: green;
+    background: rgba(0, 0, 0, 0.637);
     position: fixed;
     top: 0;
     right: -300px;
@@ -61,6 +99,8 @@
 .nav-item{
     list-style: none;
     margin: 25px;
+    cursor: pointer;
+
 }
 .nav-link{
     text-decoration: none;
@@ -69,4 +109,16 @@
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase; 
+}
+
+@media screen and (min-width: 720px){
+    .display-nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .display-top-nav{
+        display: none;
+    }
 }
