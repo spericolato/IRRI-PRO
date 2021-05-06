@@ -4,38 +4,53 @@
 }
 
 body{
-    background: green;
+    height: 100vh;
+    width: 100%
 }
+
+.container {
+    background: url("../img/gardening-690940_1920.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
 .logo{
+    float:left;
     filter: opacity(88%);
     position: absolute;
-    z-index: 1;
+    
     top: -15px;
 
 }
 
-.container {
-    width: 100%;
-    height: 100vh;
-}
+
 .top-nav{
+
     display: flex;
-    position: absolute;
+
     justify-content: center;
     width: 100%;
-    background: rgba(0, 0, 0, 0.342);
-    height: 55px;
+    background: rgba(0, 0, 0, 0.637);
+    height: 65px;
     align-items: center;
     border-bottom: solid 2px snow;
 }
 
 .top-nav-list{
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
 }
 
+.home{
+    margin-right: 60px;
+    letter-spacing: 5px;
+}
+
 .top-nav-item{
+    font-family: 'Itim', cursive;
     padding: 10px;
     list-style: none;
     text-decoration: none;
@@ -44,9 +59,23 @@ body{
 }
 
 .top-nav-link{
-    color: snow;
+    font-family: 'Noto Sans SC', sans-serif;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     text-decoration: none;
+}
+
+.top-nav-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+}
+
+.top-nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
 }
 
 .navbar{
@@ -81,7 +110,7 @@ body{
 .line{
     width: 90%;
     height: 3px;
-    background-color: snow;
+    background-color: rgb(255, 255, 255);
     transition: all 0.8s;
 }
 .change .line-1{
@@ -97,18 +126,69 @@ body{
     text-align: right;
 }
 .nav-item{
+    font-family: 'Itim', cursive;
     list-style: none;
     margin: 25px;
     cursor: pointer;
 
 }
 .nav-link{
+    font-family: 'Noto Sans SC', sans-serif;
     text-decoration: none;
     font-size: 22px;
-    color: snow;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase; 
+}
+
+.nav-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+
+.intro{
+    height: 550px;
+}
+.intro-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.intro-item{
+    text-align: center;
+    margin: 45px;
+    font-family: 'Lato', sans-serif;
+}
+.intro-headders{
+    color: snow;
+    font-size: 70px;
+}
+.intro-button{
+    height: 80px;
+    width: 200px;
+    background: #72cf0ecc;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    color: snow;
+    border: none;
+    box-shadow: 0 1px;
+}
+.intro-button:hover{
+    background: #9cff32cc;
+    transition: .3s;
 }
 
 @media screen and (min-width: 720px){
@@ -120,5 +200,19 @@ body{
 @media screen and (max-width: 720px){
     .display-top-nav{
         display: none;
+    }
+    .intro-headders{
+        margin-top: 150px;
+        color: snow;
+        font-size: 50px;
+    }
+    .intro-item{
+        text-align: center;
+        margin: 20px;
+        font-family: 'Lato', sans-serif;
+    }
+    .intro-button{
+        height: 80px;
+        width: 200px;
     }
 }
